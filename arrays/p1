@@ -1,0 +1,36 @@
+
+
+class Estado extends State <Multimedia>{
+    @override
+
+    Widget build(BuildContext context) => MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(title: Text("Menús")),
+            drawer: Drawer(
+                child: ListView(
+                    children: const[
+                        DraweHeader(
+                            child: Text("Encabezado Header")
+                        ),
+                        UserAccountsDrawerHeader(
+                            accountName: Text("Miguel"),
+                            accountEmail: Text("Miguel@miguelito.com"),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: NetworkImage("URL")
+                                )
+                            )
+                        )
+                        ListTile(title: Text("Opcion 1")),
+                        ListTile(title: Text("Opcion 2")),
+                        ListTile(title: Text("Opcion 3")),
+                        ListTile(title: Text("Salir")),
+
+
+                    ]
+                )
+            )
+            body: Image.network("URL")
+        )
+    )
+}
